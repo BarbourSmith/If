@@ -4,9 +4,30 @@
     "x": 0,
     "y": 0,
     "uniqueID": 703883,
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "Input938197",
+            "ioValue": 10
+        }
+    ],
     "topLevel": true,
     "allAtoms": [
+        {
+            "atomType": "Constant",
+            "name": "Constant",
+            "x": 0.22840409956076133,
+            "y": 0.1417624521072797,
+            "uniqueID": 423708,
+            "ioValues": [
+                {
+                    "name": "number",
+                    "ioValue": true
+                }
+            ],
+            "evolve": false,
+            "min": 0,
+            "max": 20
+        },
         {
             "atomType": "Rectangle",
             "name": "Rectangle",
@@ -27,17 +48,17 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.34333821376281115,
-            "y": 0.4597701149425288,
+            "x": 0.4421669106881405,
+            "y": 0.5095785440613027,
             "uniqueID": 940997,
             "ioValues": [],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2){\n  return Sphere(40)        //return must be geometry;\n}\n\nreturn main(Input1, Input2)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Conditional, Input1, Input2){\n  if(Conditional){\n      return Input1        //return must be geometry;\n  }else{\n      return Input2\n  }\n}\n\nreturn main(Conditional, Input1, Input2)"
         },
         {
             "atomType": "Circle",
             "name": "Circle",
-            "x": 0.1617862371888726,
-            "y": 0.7471264367816093,
+            "x": 0.13250366032210836,
+            "y": 0.7739463601532567,
             "uniqueID": 118602,
             "ioValues": [
                 {
@@ -47,6 +68,14 @@
             ]
         },
         {
+            "atomType": "Input",
+            "name": "Input938197",
+            "x": 0.431185944363104,
+            "y": 0.8007662835249042,
+            "uniqueID": 782334,
+            "ioValues": []
+        },
+        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9853587115666179,
@@ -54,7 +83,35 @@
             "ioValues": []
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "number",
+            "ap2Name": "Conditional",
+            "ap2Primary": false,
+            "ap1ID": 423708,
+            "ap2ID": 940997
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Input2",
+            "ap2Primary": false,
+            "ap1ID": 321448,
+            "ap2ID": 940997
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 940997
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Input1",
+            "ap2Primary": false,
+            "ap1ID": 118602,
+            "ap2ID": 940997
+        }
+    ],
     "fileTypeVersion": 1,
     "filetypeVersion": 1,
     "circleSegmentSize": "0.1"
