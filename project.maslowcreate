@@ -6,44 +6,35 @@
     "uniqueID": 703883,
     "ioValues": [
         {
-            "name": "Input938197",
+            "name": "Geometry1",
+            "ioValue": 10
+        },
+        {
+            "name": "Geometry2",
+            "ioValue": 10
+        },
+        {
+            "name": "Conditional",
             "ioValue": 10
         }
     ],
     "topLevel": true,
     "allAtoms": [
         {
-            "atomType": "Constant",
-            "name": "Constant",
-            "x": 0.22840409956076133,
-            "y": 0.1417624521072797,
-            "uniqueID": 423708,
-            "ioValues": [
-                {
-                    "name": "number",
-                    "ioValue": true
-                }
-            ],
-            "evolve": false,
-            "min": 0,
-            "max": 20
+            "atomType": "Input",
+            "name": "Conditional",
+            "x": 0.029282576866764276,
+            "y": 0.27586206896551724,
+            "uniqueID": 412103,
+            "ioValues": []
         },
         {
-            "atomType": "Rectangle",
-            "name": "Rectangle",
-            "x": 0.1581259150805271,
-            "y": 0.30268199233716475,
-            "uniqueID": 321448,
-            "ioValues": [
-                {
-                    "name": "x length",
-                    "ioValue": 10
-                },
-                {
-                    "name": "y length",
-                    "ioValue": 10
-                }
-            ]
+            "atomType": "Input",
+            "name": "Geometry1",
+            "x": 0.03001464128843338,
+            "y": 0.5478927203065134,
+            "uniqueID": 782334,
+            "ioValues": []
         },
         {
             "atomType": "Code",
@@ -51,28 +42,28 @@
             "x": 0.4421669106881405,
             "y": 0.5095785440613027,
             "uniqueID": 940997,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "Input1",
+                    "ioValue": 10
+                },
+                {
+                    "name": "Input2",
+                    "ioValue": 10
+                },
+                {
+                    "name": "Conditional",
+                    "ioValue": 10
+                }
+            ],
             "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Conditional, Input1, Input2){\n  if(Conditional){\n      return Input1        //return must be geometry;\n  }else{\n      return Input2\n  }\n}\n\nreturn main(Conditional, Input1, Input2)"
         },
         {
-            "atomType": "Circle",
-            "name": "Circle",
-            "x": 0.13250366032210836,
-            "y": 0.7739463601532567,
-            "uniqueID": 118602,
-            "ioValues": [
-                {
-                    "name": "diameter",
-                    "ioValue": 10
-                }
-            ]
-        },
-        {
             "atomType": "Input",
-            "name": "Input938197",
-            "x": 0.431185944363104,
-            "y": 0.8007662835249042,
-            "uniqueID": 782334,
+            "name": "Geometry2",
+            "x": 0.024158125915080528,
+            "y": 0.7203065134099617,
+            "uniqueID": 390051,
             "ioValues": []
         },
         {
@@ -80,22 +71,27 @@
             "name": "Output",
             "x": 0.9853587115666179,
             "y": 0.5,
-            "ioValues": []
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": 10
+                }
+            ]
         }
     ],
     "allConnectors": [
         {
-            "ap1Name": "number",
+            "ap1Name": "number or geometry",
             "ap2Name": "Conditional",
             "ap2Primary": false,
-            "ap1ID": 423708,
+            "ap1ID": 412103,
             "ap2ID": 940997
         },
         {
-            "ap1Name": "geometry",
-            "ap2Name": "Input2",
+            "ap1Name": "number or geometry",
+            "ap2Name": "Input1",
             "ap2Primary": false,
-            "ap1ID": 321448,
+            "ap1ID": 782334,
             "ap2ID": 940997
         },
         {
@@ -105,10 +101,10 @@
             "ap1ID": 940997
         },
         {
-            "ap1Name": "geometry",
-            "ap2Name": "Input1",
+            "ap1Name": "number or geometry",
+            "ap2Name": "Input2",
             "ap2Primary": false,
-            "ap1ID": 118602,
+            "ap1ID": 390051,
             "ap2ID": 940997
         }
     ],
